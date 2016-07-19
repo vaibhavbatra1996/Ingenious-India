@@ -15,11 +15,15 @@
     padding: 20px 0px 20px 0px;
 }
 
+.navbar-inverse {
+    background: #090F5A;
+}
+
 .jumbotron {
     padding:50px 30px 30px 30px;
     margin:0px auto;
-    background: #7986CB ;
-    color:floralwhite;
+    background: #fff;
+    color:#242EA4;
 }
 
 address{
@@ -49,7 +53,7 @@ body{
 
 .navbar-inverse .navbar-nav .open .dropdown-menu> li> a,
 .navbar-inverse .navbar-nav .open .dropdown-menu {
-    background-color: #303F9F;
+    background-color: #6F6968;
     color:#eeeeee;
 }
 
