@@ -1,233 +1,688 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head 
-         content must come *after* these tags -->
-    
-    <title>Ingenious India</title>
-      <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<meta name="google-site-verification" content="bPT9Mza-jp3x2VHN8aZX7GU3uuPsk8PbybAIgbsQ6mk" />
+<title>Ingenious India</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/mystyles.css" rel="stylesheet">
      <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap-social.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();i
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+<!-- start menu -->     
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<!-- end menu -->
+<!-- top scrolling --><!-- made by kapl bhatt -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+   <script type="text/javascript">
+      jQuery(document).ready(function($) {
+         $(".scroll").click(function(event){    
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+         });
+      });
+   </script>
 </head>
-
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-             <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Ingenious</a>
+  <div class="header-top">
+    <div class="wrap"> 
+      <div class="logo">
+         <a href="index.html"><img src="images/logo.jpg" alt="" width="150%" /></a>
+       </div>
+       <div class="cssmenu">
+         <ul>
+          <li class="active"><a href="#">Home</a></li> 
+          <li><a href="login.html">Services</a></li>
+          <li><a href="aboutus.html">Our Team</a></li> 
+          <li><a href="checkout.html">Career</a></li>
+          <li><a href="checkout.html">Blog & Vlog</a></li> 
+          <li><a href="contact.html">Contact us</a></li> 
+          <li><a href="#" data-toggle="modal" data-target=".search-modal1-lg">Register</a></li>
+          <li><a href="#" data-toggle="modal" data-target=".search-modal-lg">LogIn</a></li>
+        </ul>
+      </div>
+      
+      <div class="clear"></div>
+   </div>
+   </div>
+   </div>
+   <!--modal-->
+   <div class="modal fade search-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Login</h4>
                 </div>
-            <div id="navbar" class="navbar-collapse collapse">
-
-                <ul class="nav navbar-nav">
-                    
-                        <li class="active"><a href="#"><span class="glyphicon glyphicon-home"
-                         aria-hidden="true"></span> Home</a></li>
-                    <li><a href="aboutus.html"><span class="glyphicon glyphicon-info-sign"
-                         aria-hidden="true"></span> About</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                         role="button" aria-haspopup="true" aria-expanded="false">
-                         <i class="fa fa-question-circle" aria-hidden="true">
-                         Enquiries </i><span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="http://goo.gl/forms/mPwwQKO6bYJ2naW43">Event management</a></li>
-                            <li><a href="http://goo.gl/forms/cbo4bWFO3VDqWt4n1">General</a></li>
-                            <li><a href="http://goo.gl/forms/KefUDCyQnKAgIESF3">Corporate gifting</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header" style="color:white;">Others</li>
-                            <li><a href="#">Best Selling Products</a></li>
-                        </ul>
-                     </li>
-                    <li><a href="contact.html"><i class="fa fa-envelope-o"> Contact</i></a></li>
-                </ul>
-                <form class = "navbar-form navbar-right form-inline" role = "form">
-                    <div class = "form-group">
+                <div class="modal-body row">
+                    <div class="col-sm-4 col-sm-offset-1">
                         <input type = "text" class = "form-control" placeholder = "Email">
+                    </div>
+                    <div class="col-sm-4">
                         <input type = "text" class = "form-control" placeholder = "Password">
                     </div>
-                    <div class="checkbox" style="color:#f2dede;">
-                        <label><input type="checkbox" value=""> Remember me </label>
-                    </div>
+                    <div class="col-sm-2"> 
+                        <input type="checkbox" value=""> Remember me </label>
+                    </div>    
+                </div>
+                <div class="modal-footer">
                     <button type = "submit" class = "btn btn-info"> Sign In</button>
-         
-                </form>
-            </div>
-    </nav>
-    <header class="jumbotron">
-
-        <!-- Main component for a primary marketing message or call to action -->
-
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-8">
-                    <h1><b>Welcome to Ingenious India</b></h1>
-                    <br><br><br>
-                    <p style="font-size: 220%">Technology For Tomorrow</p>
-                    
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <p style="padding:10px;"></p>
-                    <img src="logo.jpg" class="img-responsive" height=75% width=75%>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="container">
-        <div class="row row-content">
-            <div class="col-xs-12 col-sm-12">
-            <a href="http://www.artistics.co.in/index.php?id_category=12&controller=category">
-                <img src="Corporate-Gifts-Web-Banner.jpg" align="center" class="img-responsive" width=98% alt="Corporate Gifts">
-            </a>    
-                <!--other images 2 above 2 below-->
-            </div>
-         </div>   
-            <div class="row row-content">
-                <div class="col-xs-12 col-sm-12">
-                
-                    <a href="http://www.artistics.co.in/index.php?id_category=13&controller=category">
-                        <img src="awards and momentos.jpg" align="center" class="img-responsive" width=98% alt="Awards and Mementos" >
-                    </a>
-                 </div>
-            </div>
-            <div class="row row-content">
-                <div class="col-xs-12 col-sm-12">
-                
-                    <a href="http://goo.gl/forms/cbo4bWFO3VDqWt4n1">
-                        <img src="fashion shows.jpg" align="center" class="img-responsive" width=98% alt="Fashion Shows">
-                    </a>
-                 </div>
-            </div>  
-            <div class="row row-content">
-                <div class="col-xs-12 col-sm-12">
-                
-                    <a href="http://www.artistics.co.in">
-                        <img src="ecommerce shopping of artistics.jpg" align="center" class="img-responsive" width=98% alt="Ecommerce Shopping of Artistics">
-                    </a>
-                 </div>
-            </div> 
-
-        <div class="row row-content">
-        <div class="col-xs-12">
-            <div id="mycarousel" class="carousel slide" data-ride="carousel">
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active" align="center">
-                        <img class="img-responsive" src="special-offer.png" alt="offers">
-                    <!--    <div class="carousel-caption">
-                            <h2 style="color: #8A0737;">Comfort</h2>
-                            <p style="color: #8A0737;">We make your travel experience very comfortable</p>
-                            <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
-                        </div>-->
-                    </div>
-                    <div class="item" align="left">
-                        <img class="img-responsive" src="free delivery.png" alt="home delivery">
-                        <div class="carousel-caption">
-                            <!--<h2 style="color: green;">Free Home Delivery</h2>-->
-                            <h3 style="color: blue;" align="right">On purchase of <br>Rs.499 and above !</h3>
-                            <p align="right"><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
-                        </div>
-                    </div>
-                    <div class='item' align="center">
-                        <img class="img-responsive" src="Fast Delivery.png" alt="fastdelivery">
-                    <!--    <div class="carousel-caption">
-                            <h2 style="color: #2917B5" align="right">Fast and Reliable Delivery</h2>
-                            <p style="color: #2917B5" align="right">Above all, we save your Time by serving you fast!</p>
-                            <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
-                        </div>-->
-                    </div>
-                </div>
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#mycarousel" data-slide-to="1"></li>
-                    <li data-target="#mycarousel" data-slide-to="2"></li>
-                </ol>
-                <!-- Controls -->
-                <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>0
-                <div class="btn-group" id="carouselButtons">
-                    <button class="btn btn-danger btn-xs" id="carousel-pause">
-                        <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
-                    </button>
-                    <button class="btn btn-danger btn-xs" id="carousel-play">
-                        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-                    </button>
                 </div>
             </div>
         </div>
     </div>
- </div>   
-    <footer class="row-footer">
-        <div class="container">
-            <div class="row">             
-                <div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-1">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About</a></li>
-                        <li><a href="#">Enquiry</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+    <div class="modal fade search-modal1-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Register</h4>
                 </div>
-                <div class="col-xs-6 col-sm-5">
-                    <h5>Our Address</h5>
-                    <address>
-		              36 Commercial Street<br>Shivaji Nagar<br>Bengaluru 560001<br>India<br>
-		               <i class="fa fa-phone"></i>: +91-9591017634<br>
-                  <i class="fa fa-fax"></i>: +852 8765 4321<br>
-                  <i class="fa fa-envelope"></i>: 
-                                 <a href="mailto:info@ingenious.pro">info@ingenious.pro</a>
-		           </address>
-                </div>
-                <div class="col-xs-12 col-xs-push-1 col-sm-4">
-                     <div class="nav navbar-nav" style="padding: 40px 10px;">
-                        <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/ingeniouspage/"><i class="fa fa-facebook"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                <div class="modal-body row">
+                    <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="firstname" class="col-sm-2 control-label">First Name</label>                        <div class="col-sm-9">
+                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter First Name">
+                        </div>
                     </div>
+                    <div class="form-group">
+                        <label for="lastname" class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter Last Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email address" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Enter email address">
+                        </div>
+                    </div>
+                    </form>    
                 </div>
-                <div class="col-xs-12">
-                    <p style="padding:10px;"></p>
-                    <p align=center>© Copyright 2016 Ingenious India</p>
+                <div class="modal-footer">
+                    <button type = "submit" class = "btn btn-info"> Sign Up</button>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+        <div class="index-banner">
+           <div class="wmuSlider example1" style="height: 560px;">
+           <div class="wmuSliderWrapper">
+              <article style="position: relative; width: 100%; opacity: 1;"> 
+                  <div class="banner-wrap">
+                     <div class="slider-left">
+                     <img src="images/events.jpg" alt=""/> 
+                  </div>
+                   <div class="slider-right">
+                      <h2>Event Management</h2>
+                      <h2>Corporate Gifting</h2>
+                      
+                   </div>
+                   <div class="clear"></div>
+                </div>
+               </article>
+               <article style="position: absolute; width: 100%; opacity: 0;"> 
+                   <div class="banner-wrap">
+                     <div class="slider-left">
+                     <img src="images/awards.jpg" alt=""/> 
+                  </div>
+                   <div class="slider-right">
+                      <h2>Awards</h2>
+                      <h2>&</h2>
+                      <h2>Mementos</h2>              
+                   </div>
+                   <div class="clear"></div>
+                </div>
+               </article>
+               <article style="position: absolute; width: 100%; opacity: 0;">
+                  <div class="banner-wrap">
+                     <div class="slider-left">
+                     <img src="images/fashion.jpg" alt=""/> 
+                  </div>
+                   <div class="slider-right">
+                      <h2>Fashion Shows</h2>
+                      
+                      
+                   </div>
+                   <div class="clear"></div>
+                </div>
+               </article>
+               <article style="position: absolute; width: 100%; opacity: 0;">
+                  <div class="banner-wrap">
+                     <div class="slider-left">
+                     <img src="images/artistics.jpg" alt=""/> 
+                  </div>
+                   <div class="slider-right">
+                      <h2>Ecommerce</h2>
+                      <h2>Artistics</h2>
+                      
+                      <div class="btn"><a href="http://www.artistics.co.in/index.php">Shop Now</a></div>
+                   </div>
+                   <div class="clear"></div>
+                </div>
+               </article>
+             </div>
+                <a class="wmuSliderPrev">Previous</a><a class="wmuSliderNext">Next</a>
+                <ul class="wmuSliderPagination">
+                  <li><a href="#" class="">0</a></li>
+                  <li><a href="#" class="">1</a></li>
+                  <li><a href="#" class="wmuActive">2</a></li>
+                  <li><a href="#">3</a></li>
+                  
+                  </ul>
+                 <a class="wmuSliderPrev">Previous</a><a class="wmuSliderNext">Next</a><ul class="wmuSliderPagination"><li><a href="#" class="wmuActive">0</a></li><li><a href="#" class="">1</a></li><li><a href="#" class="">2</a></li><li><a href="#" class="">3</a></li><li><a href="#" class="">4</a></li></ul></div>
+                <script src="js/jquery.wmuSlider.js"></script> 
+             <script type="text/javascript" src="js/modernizr.custom.min.js"></script> 
+                  <script>
+                         $('.example1').wmuSlider();         
+                     </script>                     
+             </div>
+             <div class="main">
+                <div class="wrap">
+                 <div class="content-top">
+                  <div class="lsidebar span_1_of_c1">
+                 <ul>   
+                    <li><a href="#"><span> </span></a> <img src="images/social.jpg" width="400" ><a href="#"></a></li>
+                   </ul>
+               </div>
+               <div class="cont span_2_of_c1">
+                 <div class="social">  
+                    <ul>   
+                    <li><a href="#"><span> </span></a><a href="https://www.facebook.com/ingeniouspage/"> <img src="images/facebook.png" height="100" width="100"></a><a href="#"></a></li>
+                   </ul>
+                     </div>
+
+                     <div class="social">  
+                    <ul>  
+                    <li><a href="#"><span> </span></a> <img src="images/twitter.png" height="100" width="100"><a href="#"></a></li>
+                   </ul>
+                     </div>
+
+                    <div class="social">  
+                    <ul>   
+                    <li><a href="#"><span> </span></a> <img src="images/linkedin.gif" height="100" width="100"><a href="#"></a></li>
+                   </ul>
+                     </div>
+
+
+                     <div class="social">  
+                    <ul>   
+                    <li><a href="#"><span> </span></a> <img src="images/pinterest.gif" height="110" width="110"><a href="#"></a></li>
+                   </ul>
+                     </div>
+
+
+                     <div class="social">  
+                    <ul>   
+                    <li><a href="#"><span> </span></a> <img src="images/google+.png" height="110" width="110"><a href="#"></a></li>
+                   </ul>
+                     </div>
+
+
+                     <div class="social">  
+                    <ul>   
+                    <li><a href="#"><span> </span></a> <img src="images/snapchat.gif" height="100" width="100"><a href="#"></a></li>
+                   </ul>
+                     </div>
+
+                     <div class="social">  
+                    <ul>   
+                    <li><a href="#"><span> </span></a> <img src="images/instagram.png" height="100" width="100"><a href="#"></a></li>
+                   </ul>
+                     </div>
+
+                     <div class="social">  
+                    <ul>   
+                    <li><a href="#"><span> </span></a> <img src="images/tumblr.png" height="100" width="100"><a href="#"></a></li>
+                   </ul>
+                     </div>
+
+
+
+                  
+                   <div class="social"></div>
+                  <div class="clear"> </div>
+                 </div>
+                 <div class="clear"></div>         
+               </div>
+              <div class="content-bottom">
+               <div class="box1">
+                <div class="col_1_of_3 span_1_of_3"><a href="http://goo.gl/forms/mPwwQKO6bYJ2naW43">
+                 <div class="view view-fifth">
+                 <div class="top_box">
+                  <h3 class="m_1">Event Management</h3>
+                  
+                     <div class="grid_img">
+                     <div class="css3"><img src="images/events1.jpg" alt=""/></div>
+                         <div class="mask">
+                              <div class="info">Enquiry</div>
+                           </div>
+                       </div>
+                       
+                  </div>
+                   </div>
+                  <span class="rating">
+                    <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+                    <label for="rating-input-1-5" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+                    <label for="rating-input-1-4" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+                    <label for="rating-input-1-3" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+                    <label for="rating-input-1-2" class="rating-star"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+                    <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+                 (45)
+                  </span>
+                   <ul class="list">
+                    <li>
+                     <img src="images/plus.png" alt=""/>
+                     <ul class="icon1 sub-icon1 profile_img">
+                       <li><a class="active-icon c1" href="#">Connect</a>
+                        <ul class="sub-icon1 list">
+                           <li><h3>Connect with us via Linkedin</h3><a href=""></a></li>
+                           
+                        </ul>
+                       </li>
+                      </ul>
+                     </li>
+                                         </ul>
+                   <div class="clear"></div>
+               </a></div>
+                <div class="col_1_of_3 span_1_of_3"><a href="http://goo.gl/forms/KefUDCyQnKAgIESF3">
+                 <div class="view view-fifth">
+                 <div class="top_box">
+                  <h3 class="m_1">General Enquiry</h3>
+                  
+                   <div class="grid_img">
+                     <div class="css3"><img src="images/genq.png" height="210" alt=""/></div>
+                         <div class="mask">
+                              <div class="info">ENQUIRE</div>
+                           </div>
+                       </div>
+                       
+                  </div>
+                   </div>
+                  <span class="rating">
+                    <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+                    <label for="rating-input-1-5" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+                    <label for="rating-input-1-4" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+                    <label for="rating-input-1-3" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+                    <label for="rating-input-1-2" class="rating-star"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+                    <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+                 (45)
+                  </span>
+                   <ul class="list">
+                    <li>
+                     <img src="images/plus.png" alt=""/>
+                     <ul class="icon1 sub-icon1 profile_img">
+                       <li><a class="active-icon c1" href="#">  Connect</a>
+                        <ul class="sub-icon1 list">
+                           <li><h3>Connect with us via <strong>Linkedin</strong></h3><a href=""></a></li>
+                           
+                        </ul>
+                       </li>
+                      </ul>
+                     </li>
+                    </ul>
+                   <div class="clear"></div>
+               </a></div>
+                <div class="col_1_of_3 span_1_of_3"><a href="http://goo.gl/forms/cbo4bWFO3VDqWt4n1">
+                 <div class="view view-fifth">
+                 <div class="top_box">
+                  <h3 class="m_1">Corporate Gifting</h3>
+                  
+                     <div class="grid_img">
+                     <div class="css3"><img src="images/awards1.jpg" alt=""/></div>
+                         <div class="mask">
+                              <div class="info">Enquire</div>
+                           </div>
+                       </div>
+                       
+                  </div>
+                   </div>
+                  <span class="rating">
+                    <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+                    <label for="rating-input-1-5" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+                    <label for="rating-input-1-4" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+                    <label for="rating-input-1-3" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+                    <label for="rating-input-1-2" class="rating-star"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+                    <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+                 (45)
+                  </span>
+                   <ul class="list">
+                    <li>
+                     <img src="images/plus.png" alt=""/>
+                     <ul class="icon1 sub-icon1 profile_img">
+                       <li><a class="active-icon c1" href="#">Connect</a>
+                        <ul class="sub-icon1 list">
+                           <li><h3>Connect with us via Linkedin</h3><a href=""></a></li>
+                           
+                        </ul>
+                       </li>
+                      </ul>
+                     </li>
+                    </ul>
+                   <div class="clear"></div>
+               </a></div>
+              <div class="clear"></div>
+           </div>
+           <div class="box1">
+              <div class="col_1_of_3 span_1_of_3"><a href="http://www.artistics.co.in/index.php">
+                 <div class="view view-fifth">
+                 <div class="top_box">
+                  <h3 class="m_1">Furniture</h3>
+                  
+                     <div class="grid_img">
+                     <div class="css3"><img src="images/a.png" alt=""/></div>
+                         <div class="mask">
+                              <div class="info">Quick View</div>
+                           </div>
+                       </div>
+                       
+                  </div>
+                   </div>
+                  <span class="rating">
+                    <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+                    <label for="rating-input-1-5" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+                    <label for="rating-input-1-4" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+                    <label for="rating-input-1-3" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+                    <label for="rating-input-1-2" class="rating-star"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+                    <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+                 (45)
+                  </span>
+                   <ul class="list">
+                    <li>
+                     <img src="images/plus.png" alt=""/>
+                     <ul class="icon1 sub-icon1 profile_img">
+                       <li><a class="active-icon c1" href="http://www.artistics.co.in/index.php">Add To Bag </a>
+                        
+                       </li>
+                      </ul>
+                     </li>
+                    </ul>
+                   <div class="clear"></div>
+               </a></div>
+                <div class="col_1_of_3 span_1_of_3"><a href="http://www.artistics.co.in/index.php">
+                 <div class="view view-fifth">
+                 <div class="top_box">
+                  <h3 class="m_1">Home Decors</h3>
+                  
+                     <div class="grid_img">
+                     <div class="css3"><img src="images/b.png" alt=""/></div>
+                         <div class="mask">
+                              <div class="info">Quick View</div>
+                           </div>
+                       </div>
+                       
+                  </div>
+                   </div>
+                  <span class="rating">
+                    <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+                    <label for="rating-input-1-5" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+                    <label for="rating-input-1-4" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+                    <label for="rating-input-1-3" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+                    <label for="rating-input-1-2" class="rating-star"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+                    <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+                 (45)
+                  </span>
+                   <ul class="list">
+                    <li>
+                     <img src="images/plus.png" alt=""/>
+                     <ul class="icon1 sub-icon1 profile_img">
+                       <li><a class="active-icon c1" href="http://www.artistics.co.in/">Add To Bag </a>
+                        
+                       </li>
+                      </ul>
+                     </li>
+                    </ul>
+                   <div class="clear"></div>
+               </a></div>
+               <div class="col_1_of_3 span_1_of_3"><a href="http://www.artistics.co.in/">
+                 <div class="view view-fifth">
+                 <div class="top_box">
+                  <h3 class="m_1">Furniture for Outdoors</h3>
+                  
+                     <div class="grid_img">
+                     <div class="css3"><img src="images/c.png" alt=""/></div>
+                         <div class="mask">
+                              <div class="info">Quick View</div>
+                           </div>
+                       </div>
+                       
+                  </div>
+                   </div>
+                  <span class="rating">
+                    <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+                    <label for="rating-input-1-5" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+                    <label for="rating-input-1-4" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+                    <label for="rating-input-1-3" class="rating-star1"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+                    <label for="rating-input-1-2" class="rating-star"></label>
+                    <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+                    <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+                 (45)
+                  </span>
+                   <ul class="list">
+                    <li>
+                     <img src="images/plus.png" alt=""/>
+                     <ul class="icon1 sub-icon1 profile_img">
+                       <li><a class="active-icon c1" href="http://www.artistics.co.in/">Add To Bag </a>
+                        
+                       </li>
+                      </ul>
+                     </li>
+                    </ul>
+                   <div class="clear"></div>
+               </a></div>
+              <div class="clear"></div>
+             </div>
+           </div>
+          </div>
+        </div>
+        <div class="footer">
+           <div class="footer-top">
+            <div class="wrap">
+                  <div class="col_1_of_footer-top span_1_of_footer-top">
+                <ul class="f_list">
+                  <li><img src="images/f_icon.png" alt=""/><span class="delivery">Free delivery on all orders over ₹499*</span></li>
+                </ul>
+               </div>
+               <div class="col_1_of_footer-top span_1_of_footer-top">
+               <ul class="f_list">
+                  <li><img src="images/f_icon1.png" alt=""/><span class="delivery">Call us at :<span class="orange"> 9591017634/8892251042</span></span></li>
+                </ul>
+               </div>
+               <div class="col_1_of_footer-top span_1_of_footer-top">
+               <ul class="f_list">
+                  <li><img src="images/f_icon2.png" alt=""/><span class="delivery">Fast delivery & free returns</span></li>
+                </ul>
+               </div>
+              <div class="clear"></div>
+          </div>
+          </div>
+          <div class="footer-middle">
+            <div class="wrap">
+               <div class="section group">
+            <div class="col_1_of_middle span_1_of_middle">
+               
+                </div>
+            <div class="col_1_of_middle span_1_of_middle">
+               <ul class="f_list1">
+                  <li><span class="m_8">Sign up for email and Get 15% off</span>
+                  <div class="search">   
+                     <input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                     <input type="submit" value="Subscribe" id="submit" name="submit">
+                     <div id="response"> </div>
+                  </div><div class="clear"></div>
+                   </li>
+               </ul>
+            </div>
+            <div class="clear"></div>
+            </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="wrap">
+               <div class="section group">
+            <div class="col_1_of_5 span_1_of_5">
+               <ul class="sub_list">
+                  <h4 class="m_10">My Account</h4>
+                   <li><a href="http://www.artistics.co.in/index.php">Profile</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Wallet</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Passwords</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Orders</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Queries</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Wishlists</a></li>
+                 </ul>
+               </br>
+             </br>
+                      <ul class="sub_list">
+                        <h4 class="m_10">Partners With us</h4>
+                        
+                     <li><a href="http://www.artistics.co.in/index.php">Seller Center</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Buyer Center</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">MNC's & Corporates</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Our Clientele</a></li>
+                     </ul>
+                     
+            </div>
+            <div class="col_1_of_5 span_1_of_5">
+               <h3 class="m_9">Featured Products</h3>
+               <ul class="list1">
+                   <li><a href="http://www.artistics.co.in/index.php">Doctassist</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Promed</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">MOME</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Event Management</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Corporate Gifting</a></li>
+                </ul>
+            </div>
+            <div class="col_1_of_5 span_1_of_5">
+               <h3 class="m_9">Connect with us</h3>
+               <ul class="list1">
+                   <li><a href="https://www.facebook.com/ingeniouspage/?fref=ts">Facebook</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Instagram</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Snapchat</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Youtube</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Twitter</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Linkedin</a></li>
+                     <li><a href="http://www.artistics.co.in/index.php">Pintrest</a></li>
+                </ul>
+            </div>  
+            <div class="col_1_of_5 span_1_of_5">
+               <h3 class="m_9">Support</h3>
+               <ul class="list1">
+                  <li><a href="http://www.artistics.co.in/index.php">Store finder</a></li>
+                  <li><a href="http://www.artistics.co.in/index.php">Customer Service</a></li>
+                  <li><a href="http://www.artistics.co.in/index.php">FAQ</a></li>
+                  <li><a href="http://www.artistics.co.in/index.php">Online Shop Contact Us</a></li>
+                  
+                  <li><a href="http://www.artistics.co.in/index.php">Payment </a></li>
+                  <li><a href="http://www.artistics.co.in/index.php">Shipping </a></li>
+                  
+                  <li><a href="http://www.artistics.co.in/index.php">Returning</a></li>
+                  <li><a href="http://www.artistics.co.in/index.php">Using our Site</a></li>
+                  <li><a href="http://www.artistics.co.in/index.php">Delivery Terms</a></li>
+                  <li><a href="http://www.artistics.co.in/index.php">Site Map</a></li>
+                  <li><a href="http://www.artistics.co.in/index.php">Gift Card</a></li>
+                 
+                  </ul>
+            </div>
+
+            <div class="col_1_of_5 span_1_of_5">
+              <h3 class="m_9">About Us</h3>
+              <ul class="list1">
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="http://www.artistics.co.in/index.php">Careers</a></li>
+                    <li><a href="http://www.artistics.co.in/index.php">Press</a></li>
+                 </ul>
+
+            </div>
+            <div class="clear"></div>
+         </div>
+            </div>
+          </div>
+          <div class="copy">
+            <div class="wrap">
+                 <p>©201X All rights reserved | Ingenious India</a></p>
+            </div>
+          </div>
+       </div>
+       
+       <script type="text/javascript">
+         $(document).ready(function() {
+         
+            var defaults = {
+               containerID: 'toTop', // fading element id
+               containerHoverID: 'toTopHover', // fading element hover id
+               scrollSpeed: 1200,
+               easingType: 'linear' 
+            };
+            
+            
+            $().UItoTop({ easingType: 'easeOutQuart' });
+            
+         });
+      </script>
+        <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a><!-- made by kapl bhatt -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
 </body>
-
 </html>
